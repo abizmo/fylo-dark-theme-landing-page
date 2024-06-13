@@ -1,0 +1,25 @@
+---
+interface Item {
+  href: string;
+  label: string;
+}
+
+interface Props {
+  items: Item[];
+}
+const { items } = Astro.props;
+---
+
+<ul class="nav-list">
+  {
+    items.map(({ href, label }) => (
+      <li class="nav-item">
+        <a class="nav-link" href={href}>
+          {label}
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<style></style>
