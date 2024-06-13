@@ -11,7 +11,7 @@ const { href, type } = Astro.props
 
 <style>
 	.contact-link {
-		display: block;
+		display: flex;
 	}
 
 	.contact-link + .contact-link {
@@ -19,21 +19,19 @@ const { href, type } = Astro.props
 	}
 
 	.contact-link::before {
-		content: "x";
-		background-color: red;
 		display: inline-block;
 		margin-right: 0.5rem;
 	}
 
 	.contact-location::before {
-		content: "L";
+		content: url(/images/icon-location.svg);
 	}
 
 	.contact-phone::before {
-		content: "P";
+		content: url(/images/icon-phone.svg);
 	}
 
 	.contact-email::before {
-		content: "E";
+		content: url(/images/icon-email.svg);
 	}
 </style>
