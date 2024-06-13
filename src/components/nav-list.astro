@@ -1,27 +1,27 @@
 ---
 interface Item {
-  href: string;
-  label: string;
+	href: string
+	label: string
 }
 
 interface Props {
-  items: Item[];
-  flex?: boolean;
+	items: Item[]
+	flex?: boolean
 }
 
-const { items, flex = false } = Astro.props;
+const { items, flex = false } = Astro.props
 ---
 
 <ul class:list={["nav-list", { flex }]}>
-  {
-    items.map(({ href, label }) => (
-      <li class="nav-item">
-        <a class="nav-link" href={href}>
-          {label}
-        </a>
-      </li>
-    ))
-  }
+	{
+		items.map(({ href, label }) => (
+			<li class="nav-item">
+				<a class="nav-link" href={href}>
+					{label}
+				</a>
+			</li>
+		))
+	}
 </ul>
 
 <style></style>

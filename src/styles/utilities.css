@@ -1,9 +1,9 @@
 .container {
-  max-width: min(70rem, 100% - var(--padding, 1rem) * 2);
-  margin-inline: auto;
+	max-width: min(70rem, 100% - var(--padding, 1rem) * 2);
+	margin-inline: auto;
 }
 
 .flex {
-  display: flex;
-  gap: var(--gap, 0.5rem);
+	display: flex;
+	gap: var(--gap, 0.5rem);
 }

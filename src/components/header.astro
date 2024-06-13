@@ -1,32 +1,32 @@
 ---
-import NavList from "./nav-list.astro";
+import NavList from "./nav-list.astro"
 
 const navList = [
-  {
-    href: "#",
-    label: "Features",
-  },
-  {
-    href: "#",
-    label: "Team",
-  },
-  {
-    href: "#",
-    label: "Sign In",
-  },
-];
+	{
+		href: "#",
+		label: "Features",
+	},
+	{
+		href: "#",
+		label: "Team",
+	},
+	{
+		href: "#",
+		label: "Sign In",
+	},
+]
 ---
 
 <header class="container main-header">
-  <a href="/"><img src="" alt="Fylo" /></a>
-  <nav>
-    <NavList items={navList} flex />
-  </nav>
+	<a href="/"><img src="" alt="Fylo" /></a>
+	<nav>
+		<NavList items={navList} flex />
+	</nav>
 </header>
 
 <style>
-  .main-header {
-    display: flex;
-    justify-content: space-between;
-  }
+	.main-header {
+		display: flex;
+		justify-content: space-between;
+	}
 </style>

@@ -1,34 +1,34 @@
 ---
 interface Props {
-  type: "location" | "phone" | "email";
+	type: "location" | "phone" | "email"
 }
 
-const { type } = Astro.props;
+const { type } = Astro.props
 ---
 
 <p class:list={["contact-info", `contact-${type}`]}><slot /></p>
 
 <style>
-  .contact-info + .contact-info {
-    margin-top: 1rem;
-  }
+	.contact-info + .contact-info {
+		margin-top: 1rem;
+	}
 
-  .contact-info::before {
-    content: "x";
-    background-color: red;
-    display: inline-block;
-    margin-right: 0.5rem;
-  }
+	.contact-info::before {
+		content: "x";
+		background-color: red;
+		display: inline-block;
+		margin-right: 0.5rem;
+	}
 
-  .contact-location::before {
-    content: "L";
-  }
+	.contact-location::before {
+		content: "L";
+	}
 
-  .contact-phone::before {
-    content: "P";
-  }
+	.contact-phone::before {
+		content: "P";
+	}
 
-  .contact-email::before {
-    content: "E";
-  }
+	.contact-email::before {
+		content: "E";
+	}
 </style>
