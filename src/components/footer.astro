@@ -1,5 +1,5 @@
 ---
-import ContactInfo from "./contact-info.astro"
+import ContactLink from "./contact-link.astro"
 import NavList from "./nav-list.astro"
 import SocialsList from "./socials-list.astro"
 
@@ -44,13 +44,13 @@ const navList2 = [
 	</header>
 	<main class="footer-content">
 		<div class="contact">
-			<ContactInfo type="location">
+			<ContactLink href="#" type="location">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum facere consequuntur numquam,
 				fuga unde quas illum, saepe tempore voluptas.
-			</ContactInfo>
+			</ContactLink>
 			<div>
-				<ContactInfo type="phone">+1-543-123-4567</ContactInfo>
-				<ContactInfo type="email">example@fylo.com</ContactInfo>
+				<ContactLink href="tel:#" type="phone">+1-543-123-4567</ContactLink>
+				<ContactLink href="mailto:#" type="email">example@fylo.com</ContactLink>
 			</div>
 		</div>
 		<div class="navs">

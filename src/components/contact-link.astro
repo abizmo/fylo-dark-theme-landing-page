@@ -1,19 +1,24 @@
 ---
 interface Props {
+	href: string
 	type: "location" | "phone" | "email"
 }
 
-const { type } = Astro.props
+const { href, type } = Astro.props
 ---
 
-<p class:list={["contact-info", `contact-${type}`]}><slot /></p>
+<a href={href} class:list={["contact-link", `contact-${type}`]}><slot /></a>
 
 <style>
-	.contact-info + .contact-info {
+	.contact-link {
+		display: block;
+	}
+
+	.contact-link + .contact-link {
 		margin-top: 1rem;
 	}
 
-	.contact-info::before {
+	.contact-link::before {
 		content: "x";
 		background-color: red;
 		display: inline-block;
