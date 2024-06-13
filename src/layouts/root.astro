@@ -3,6 +3,11 @@ import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import "../styles/reset.css";
 import "../styles/utilities.css";
+
+interface Props {
+  class: string;
+}
+const { class: className } = Astro.props;
 ---
 
 <html lang="en">
@@ -15,7 +20,7 @@ import "../styles/utilities.css";
   </head>
   <body>
     <Header />
-    <slot />
+    <main class={className}><slot /></main>
     <Footer />
   </body>
 </html>
