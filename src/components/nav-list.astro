@@ -6,11 +6,13 @@ interface Item {
 
 interface Props {
   items: Item[];
+  flex?: boolean;
 }
-const { items } = Astro.props;
+
+const { items, flex = false } = Astro.props;
 ---
 
-<ul class="nav-list">
+<ul class:list={["nav-list", { flex }]}>
   {
     items.map(({ href, label }) => (
       <li class="nav-item">
