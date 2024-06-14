@@ -1,0 +1,57 @@
+---
+import Feature from "../components/feature.astro"
+
+const features = [
+	{
+		imgUrl: "/images/icon-access-anywhere.svg",
+		altText: "computer and mobile",
+		title: "Access your files, anywhere",
+		description:
+			"The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.",
+	},
+	{
+		imgUrl: "/images/icon-security.svg",
+		altText: "shield",
+		title: "Security you can trust",
+		description:
+			"2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.",
+	},
+	{
+		imgUrl: "/images/icon-collaboration.svg",
+		altText: "collaboration",
+		title: "Real-time collaboration",
+		description:
+			"Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.",
+	},
+	{
+		imgUrl: "/images/icon-any-file.svg",
+		altText: "store",
+		title: "Store any type of file",
+		description:
+			"Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for	all file types to be securely stored and shared.",
+	},
+]
+---
+
+<section class="features">
+	{
+		features.map(({ imgUrl, altText, title, description }) => (
+			<Feature imgUrl={imgUrl} altText={altText} title={title}>
+				{description}
+			</Feature>
+		))
+	}
+</section>
+
+<style>
+	.features {
+		display: grid;
+		gap: 64px;
+	}
+
+	@media (min-width: 48em) {
+		.features {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+</style>

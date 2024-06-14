@@ -1,0 +1,26 @@
+---
+interface Props {
+	imgUrl: string
+	altText: string
+	title: string
+}
+
+const { imgUrl, altText, title } = Astro.props
+---
+
+<article class="text-center | feature">
+	<img class="mb-6 mx-auto" src={imgUrl} alt={altText} />
+	<h3 class="mb-2">{title}</h3>
+	<p><slot /></p>
+</article>
+
+<style>
+	.feature {
+		max-width: 27rem;
+	}
+
+	img {
+		max-height: 56px;
+		max-width: 56px;
+	}
+</style>
