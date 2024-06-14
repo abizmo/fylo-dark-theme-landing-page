@@ -8,7 +8,7 @@
 	gap: var(--gap, 0.5rem);
 }
 
-.center {
+.text-center {
 	text-align: center;
 }
 
@@ -22,4 +22,12 @@
 
 .mb-8 {
 	margin-bottom: 32px;
+}
+
+.mx-auto {
+	margin-inline: auto;
+}
+
+.max-w-prose {
+	max-width: 65ch;
 }
