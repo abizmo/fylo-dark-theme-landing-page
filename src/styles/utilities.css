@@ -3,6 +3,10 @@
 	margin-inline: auto;
 }
 
+.block {
+	display: block;
+}
+
 .flex {
 	display: flex;
 	gap: var(--gap, 0.5rem);

@@ -1,0 +1,48 @@
+---
+import Review from "../components/review.astro"
+
+const reviews = [
+	{
+		comment:
+			"Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.",
+		author: {
+			name: "Satish Patel",
+			position: "Founder & CEO, Huddle",
+			avatarUrl: "/images/profile-1.jpg",
+		},
+	},
+	{
+		comment:
+			"Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.",
+		position: "Founder & CEO, Huddle",
+		author: {
+			name: "Bruce McKenzie",
+			position: "Founder & CEO, Huddle",
+			avatarUrl: "/images/profile-2.jpg",
+		},
+	},
+	{
+		comment:
+			"Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.",
+		position: "Founder & CEO, Huddle",
+		author: {
+			name: "Iva Boyd",
+			position: "Founder & CEO, Huddle",
+			avatarUrl: "/images/profile-3.jpg",
+		},
+	},
+]
+---
+
+<section class="reviews">
+	{reviews.map(({ comment, author }) => <Review author={author}>{comment}</Review>)}
+</section>
+
+<style>
+	.reviews {
+		display: grid;
+		gap: 24px;
+		grid-template-columns: repeat(auto-fit, min(100%, 22rem));
+		justify-content: center;
+	}
+</style>

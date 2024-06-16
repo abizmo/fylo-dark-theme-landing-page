@@ -1,0 +1,48 @@
+---
+interface Author {
+	name: string
+	position: string
+	avatarUrl: string
+}
+
+interface Props {
+	author: Author
+}
+
+const { author } = Astro.props
+const { name, position, avatarUrl } = author
+---
+
+<article class="review">
+	<p class="mb-4"><slot /></p>
+	<div class="review__author">
+		<img class="review__avatar" src={avatarUrl} alt={name} />
+		<div>
+			<span class="block mb-1">{name}</span>
+			<span class="block">{position}</span>
+		</div>
+	</div>
+</article>
+
+<style>
+	.review {
+		background-color: red;
+		padding: 1.5rem 1rem;
+		border-radius: 0.25rem;
+	}
+
+	.review__author {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+	}
+
+	.review__avatar {
+		width: 1.5rem;
+		aspect-ratio: 1;
+		border-radius: 9999rem;
+	}
+
+	.review__name {
+	}
+</style>
