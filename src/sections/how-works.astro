@@ -1,0 +1,51 @@
+---
+
+---
+
+<section class="how-works">
+	<img class="mx-auto" src="/images/illustration-stay-productive.png" alt="people working" />
+	<div class="how-works--info max-w-prose">
+		<h2>Stay productive, wherever you are</h2>
+
+		<p>
+			Never let location be an issue when accessing your files. Fylo has you covered for all of your
+			file storage needs.
+		</p>
+
+		<p>
+			Securely share files and folders with friends, family and colleagues for live collaboration.
+			No email attachments required.
+		</p>
+
+		<a class="how-works--link" href="#"
+			>See how Fylo works <img src="/images/icon-arrow.svg" alt="arrow" /></a
+		>
+	</div>
+</section>
+
+<style>
+	.how-works {
+		display: grid;
+		gap: 32px;
+	}
+
+	.how-works--info > * + * {
+		margin-top: 1rem;
+	}
+
+	.how-works--link {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		border-bottom: 1px solid red;
+		padding-bottom: 0.25rem;
+		max-width: fit-content;
+	}
+
+	@media (min-width: 48em) {
+		.how-works {
+			grid-template-columns: 55% 1fr;
+			place-items: center;
+		}
+	}
+</style>
