@@ -11,11 +11,18 @@ const { class: className } = Astro.props
 <style>
 	.btn {
 		height: 2.5rem;
-		width: 14rem;
+		width: 100%;
+		padding-inline: 1.5rem;
 		border-radius: 9999rem;
 		border: 0;
 		background-color: red;
 		color: silver;
 		text-transform: capitalize;
+	}
+
+	@media (min-width: 48em) {
+		.btn {
+			height: 3rem;
+		}
 	}
 </style>

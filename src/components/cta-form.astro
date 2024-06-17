@@ -1,0 +1,27 @@
+---
+import Button from "../components/button.astro"
+---
+
+<form class="cta-form">
+	<input type="text" />
+	<Button>Get Started For Free</Button>
+</form>
+<style>
+	.cta-form {
+		display: grid;
+		gap: 1rem;
+	}
+
+	input {
+		height: 2.5rem;
+		padding-inline: 1.5rem;
+		border-radius: 9999rem;
+		border: 0;
+	}
+
+	@media (min-width: 48em) {
+		.cta-form {
+			grid-template-columns: 1fr max-content;
+		}
+	}
+</style>
