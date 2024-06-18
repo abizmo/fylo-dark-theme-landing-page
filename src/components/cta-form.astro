@@ -2,14 +2,24 @@
 import Button from "../components/button.astro"
 ---
 
-<form class="cta-form">
-	<input type="text" />
+<form class="cta-form" novalidate id="newsletter">
+	<div class="form-group">
+		<input id="email" type="email" required />
+		<span class="error" aria-live="polite"></span>
+	</div>
 	<Button>Get Started For Free</Button>
 </form>
+
 <style>
 	.cta-form {
 		display: grid;
 		gap: 1rem;
+	}
+
+	.form-group {
+		display: grid;
+		gap: 4px;
+		grid-auto-columns: 100%;
 	}
 
 	input {
@@ -23,5 +33,40 @@ import Button from "../components/button.astro"
 		.cta-form {
 			grid-template-columns: 1fr max-content;
 		}
+
+		input {
+			height: 3rem;
+		}
+
+		.error {
+			height: 2rem;
+		}
 	}
 </style>
+
+<script>
+	const form = document.getElementById("newsletter")
+	const email = document.getElementById("email") as HTMLInputElement
+	const emailError = document.querySelector("#email + .error") as HTMLSpanElement
+
+	email?.addEventListener("input", () => {
+		if (email.validity.valid) {
+			emailError.textContent = ""
+			emailError.className = "error"
+		} else {
+			showError()
+		}
+	})
+
+	form?.addEventListener("submit", (evt) => {
+		evt.preventDefault()
+		if (!email.validity.valid) {
+			showError()
+		}
+	})
+
+	function showError() {
+		emailError.textContent = "Please enter a valid email address"
+		emailError.className = "error active"
+	}
+</script>

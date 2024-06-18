@@ -3,19 +3,21 @@ import CtaForm from "../components/cta-form.astro"
 ---
 
 <section class="cta-section">
-	<div class="max-w-md mx-auto text-center | cta-card">
-		<h2>Get early access today</h2>
-		<p>
-			It only takes a minute to sign up and our free starter tier is extremely generous. If you have
-			any questions, our support team would be happy to help you.
-		</p>
-		<CtaForm />
+	<div class="max-w-md mx-auto | cta-card">
+		<div class="text-center">
+			<h2>Get early access today</h2>
+			<p>
+				It only takes a minute to sign up and our free starter tier is extremely generous. If you
+				have any questions, our support team would be happy to help you.
+			</p>
+		</div>
+		<CtaForm client:load />
 	</div>
 </section>
 
 <style>
 	.cta-section {
-		padding-block: 7rem 4rem;
+		padding-block: 7rem 4rem 5rem;
 		background: linear-gradient(0deg, rgba(255, 212, 255, 0) 50%, rgba(255, 212, 255, 1) 50%);
 	}
 
