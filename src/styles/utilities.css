@@ -16,6 +16,10 @@
 	text-align: center;
 }
 
+.ff-accent {
+	font-family: var(--ff-accent);
+}
+
 .mb-2 {
 	margin-bottom: 8px;
 }

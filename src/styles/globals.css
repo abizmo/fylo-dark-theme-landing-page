@@ -1,4 +1,17 @@
+:root {
+	--ff-body: "Open Sans", sans-serif;
+	--ff-accent: "Raleway", sans-serif;
+	--ff-heading: var(--ff-accent);
+}
+
 body {
 	background-color: black;
 	color: white;
+	font-family: var(--ff-body);
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--ff-heading);
 }
