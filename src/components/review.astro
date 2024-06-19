@@ -14,12 +14,12 @@ const { name, position, avatarUrl } = author
 ---
 
 <article class="review">
-	<p class="mb-4"><slot /></p>
+	<p class="fs-200 mb-4"><slot /></p>
 	<div class="review__author">
 		<img class="review__avatar" src={avatarUrl} alt={name} />
 		<div>
-			<span class="block mb-1 fw-bold">{name}</span>
-			<span class="block">{position}</span>
+			<span class="block mb-1 fw-bold fs-200">{name}</span>
+			<span class="block fs-100">{position}</span>
 		</div>
 	</div>
 </article>
@@ -44,5 +44,11 @@ const { name, position, avatarUrl } = author
 	}
 
 	.review__name {
+	}
+
+	@media (min-width: 48em) {
+		.review > p {
+			font-size: var(--fs-400);
+		}
 	}
 </style>

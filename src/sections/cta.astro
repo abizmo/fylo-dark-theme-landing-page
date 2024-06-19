@@ -5,7 +5,7 @@ import CtaForm from "../components/cta-form.astro"
 <section class="cta-section">
 	<div class="max-w-md mx-auto | cta-card">
 		<div class="text-center">
-			<h2>Get early access today</h2>
+			<h2 class="fs-500">Get early access today</h2>
 			<p>
 				It only takes a minute to sign up and our free starter tier is extremely generous. If you
 				have any questions, our support team would be happy to help you.
@@ -36,6 +36,10 @@ import CtaForm from "../components/cta-form.astro"
 		.cta-card {
 			border-radius: 0.25rem;
 			padding: 4rem 5rem;
+		}
+
+		h2 {
+			font-size: var(--fs-800);
 		}
 	}
 </style>

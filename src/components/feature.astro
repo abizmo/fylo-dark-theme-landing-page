@@ -10,7 +10,7 @@ const { imgUrl, altText, title } = Astro.props
 
 <article class="text-center | feature">
 	<img class="mb-6 mx-auto" src={imgUrl} alt={altText} />
-	<h3 class="mb-2">{title}</h3>
+	<h3 class="fs-500 mb-2">{title}</h3>
 	<p><slot /></p>
 </article>
 
@@ -22,5 +22,11 @@ const { imgUrl, altText, title } = Astro.props
 	img {
 		max-height: 56px;
 		max-width: 56px;
+	}
+
+	@media (min-width: 48em) {
+		h3 {
+			font-size: var(--fs-600);
+		}
 	}
 </style>

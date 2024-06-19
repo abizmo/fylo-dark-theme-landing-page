@@ -5,7 +5,7 @@
 <section class="how-works">
 	<img class="mx-auto" src="/images/illustration-stay-productive.png" alt="people working" />
 	<div class="how-works--info max-w-prose">
-		<h2>Stay productive, wherever you are</h2>
+		<h2 class="fs-500">Stay productive, wherever you are</h2>
 
 		<p>
 			Never let location be an issue when accessing your files. Fylo has you covered for all of your
@@ -17,7 +17,7 @@
 			No email attachments required.
 		</p>
 
-		<a class="how-works--link" href="#"
+		<a class="fs-300 | how-works--link" href="#"
 			>See how Fylo works <img src="/images/icon-arrow.svg" alt="arrow" /></a
 		>
 	</div>
@@ -26,19 +26,20 @@
 <style>
 	.how-works {
 		display: grid;
-		gap: 32px;
+		gap: var(--sp-800);
 	}
 
 	.how-works--info > * + * {
-		margin-top: 1rem;
+		margin-top: var(--sp-400);
 	}
 
 	.how-works--link {
 		display: flex;
 		align-items: center;
-		gap: 0.5rem;
+		gap: var(--sp-200);
+		color: red;
 		border-bottom: 1px solid red;
-		padding-bottom: 0.25rem;
+		padding-bottom: var(--sp-100);
 		max-width: fit-content;
 	}
 
@@ -46,6 +47,14 @@
 		.how-works {
 			grid-template-columns: 55% 1fr;
 			place-items: center;
+		}
+
+		h2 {
+			font-size: var(--fs-900);
+		}
+
+		a {
+			font-size: var(--fs-500);
 		}
 	}
 </style>

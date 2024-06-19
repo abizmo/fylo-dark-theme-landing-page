@@ -4,8 +4,8 @@ import Button from "../components/button.astro"
 
 <form class="cta-form" novalidate id="newsletter">
 	<div class="form-group">
-		<input id="email" type="email" required />
-		<span class="error" aria-live="polite"></span>
+		<input class="fs-200" id="email" type="email" required />
+		<span class="fs-200 error" aria-live="polite"></span>
 	</div>
 	<Button>Get Started For Free</Button>
 </form>
@@ -36,10 +36,12 @@ import Button from "../components/button.astro"
 
 		input {
 			height: 3rem;
+			font-size: var(--fs-300);
 		}
 
 		.error {
-			height: 2rem;
+			height: var(--sp-500);
+			font-size: var(--fs-300);
 		}
 	}
 </style>
@@ -52,7 +54,7 @@ import Button from "../components/button.astro"
 	email?.addEventListener("input", () => {
 		if (email.validity.valid) {
 			emailError.textContent = ""
-			emailError.className = "error"
+			emailError.classList.remove("active")
 		} else {
 			showError()
 		}
@@ -67,6 +69,6 @@ import Button from "../components/button.astro"
 
 	function showError() {
 		emailError.textContent = "Please enter a valid email address"
-		emailError.className = "error active"
+		emailError.classList.add("active")
 	}
 </script>
