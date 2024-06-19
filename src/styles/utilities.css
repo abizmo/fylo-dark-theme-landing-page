@@ -20,6 +20,14 @@
 	font-family: var(--ff-accent);
 }
 
+.fw-bold {
+	font-weight: var(--fw-bold);
+}
+
+.fw-regular {
+	font-weight: var(--fw-regular);
+}
+
 .mb-2 {
 	margin-bottom: 8px;
 }

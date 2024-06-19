@@ -2,6 +2,9 @@
 	--ff-body: "Open Sans", sans-serif;
 	--ff-accent: "Raleway", sans-serif;
 	--ff-heading: var(--ff-accent);
+
+	--fw-regular: 400;
+	--fw-bold: 700;
 }
 
 body {
@@ -14,4 +17,5 @@ h1,
 h2,
 h3 {
 	font-family: var(--ff-heading);
+	font-weight: var(--fw-bold);
 }
