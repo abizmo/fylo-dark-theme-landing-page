@@ -20,7 +20,7 @@ const navList = [
 <header class="container main-header">
 	<a href="/"><img class="logo" src="/images/logo.svg" alt="Fylo" /></a>
 	<nav>
-		<NavList class="ff-accent" items={navList} flex />
+		<NavList class="ff-accent header-nav" items={navList} flex />
 	</nav>
 </header>
 
@@ -30,7 +30,17 @@ const navList = [
 		justify-content: space-between;
 	}
 
+	.header-nav {
+		font-size: var(--fs-300);
+
+		@media (min-width: 48em) {
+			& {
+				font-size: var(--fs-500);
+			}
+		}
+	}
+
 	.logo {
-		height: 20px;
+		height: 1.25rem;
 	}
 </style>

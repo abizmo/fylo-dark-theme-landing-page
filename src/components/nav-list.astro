@@ -10,10 +10,10 @@ interface Props {
 	class: string
 }
 
-const { items, flex = false, class: className } = Astro.props
+const { items, flex = false, class: className, ...rest } = Astro.props
 ---
 
-<ul class:list={["nav-list", { flex }, className]}>
+<ul class:list={["nav-list", { flex }, className]} {...rest}>
 	{
 		items.map(({ href, label }) => (
 			<li class="nav-item">
