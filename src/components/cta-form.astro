@@ -64,6 +64,8 @@ import Button from "../components/button.astro"
 		evt.preventDefault()
 		if (!email.validity.valid) {
 			showError()
+		} else {
+			console.log("submitted")
 		}
 	})
 
