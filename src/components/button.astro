@@ -3,10 +3,10 @@ interface Props {
 	class?: string
 }
 
-const { class: className } = Astro.props
+const { class: className, ...rest } = Astro.props
 ---
 
-<button class:list={["btn ff-accent fw-bold", className]}><slot /></button>
+<button class:list={["btn ff-accent fw-bold fs-400", className]} {...rest}><slot /></button>
 
 <style>
 	.btn {
