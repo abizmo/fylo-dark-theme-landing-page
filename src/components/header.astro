@@ -20,7 +20,7 @@ const navList = [
 <header class="container main-header">
 	<a href="/"><img class="logo" src="/images/logo.svg" alt="Fylo" /></a>
 	<nav>
-		<NavList class="ff-accent header-nav" items={navList} flex />
+		<NavList class="ff-accent header-nav opacity-80" items={navList} flex />
 	</nav>
 </header>
 
@@ -28,6 +28,7 @@ const navList = [
 	.main-header {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		padding-block: var(--sp-6);
 	}
 
@@ -35,13 +36,15 @@ const navList = [
 		font-size: var(--fs-300);
 	}
 
-	.logo {
-		height: var(--sp-5);
+	@media (max-width: 48em) {
+		.logo {
+			height: var(--sp-5);
+		}
 	}
 
 	@media (min-width: 48em) {
 		.main-header {
-			padding-block: var(--sp-950);
+			padding-block: var(--sp-16);
 		}
 
 		.header-nav {

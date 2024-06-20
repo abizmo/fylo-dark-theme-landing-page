@@ -79,3 +79,7 @@
 .max-w-md {
 	max-width: var(--sz-500);
 }
+
+.opacity-80 {
+	opacity: 80%;
+}
