@@ -13,19 +13,19 @@ import Button from "../components/button.astro"
 <style>
 	.cta-form {
 		display: grid;
-		gap: 1rem;
+		gap: var(--sp-4);
 	}
 
 	.form-group {
 		display: grid;
-		gap: 4px;
+		gap: var(--sp-1);
 		grid-auto-columns: 100%;
 	}
 
 	input {
-		height: 2.5rem;
-		padding-inline: 1.5rem;
-		border-radius: 9999rem;
+		height: var(--sp-10);
+		padding-inline: var(--sp-6);
+		border-radius: var(--br-full);
 		border: 0;
 	}
 
@@ -35,12 +35,12 @@ import Button from "../components/button.astro"
 		}
 
 		input {
-			height: 3rem;
+			height: var(--sp-12);
 			font-size: var(--fs-300);
 		}
 
 		.error {
-			height: var(--sp-500);
+			height: var(--sp-5);
 			font-size: var(--fs-300);
 		}
 	}

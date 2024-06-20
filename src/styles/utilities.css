@@ -1,5 +1,5 @@
 .container {
-	max-width: min(var(--sz-700), 100% - var(--padding, var(--sp-400)) * 2);
+	max-width: min(var(--sz-700), 100% - var(--padding, var(--sp-4)) * 2);
 	margin-inline: auto;
 }
 
@@ -9,7 +9,7 @@
 
 .flex {
 	display: flex;
-	gap: var(--gap, var(--sp-200));
+	gap: var(--gap, var(--sp-2));
 }
 
 .text-center {
@@ -49,19 +49,19 @@
 }
 
 .mb-2 {
-	margin-bottom: var(--sp-200);
+	margin-bottom: var(--sp-2);
 }
 
 .mb-4 {
-	margin-bottom: var(--sp-400);
+	margin-bottom: var(--sp-4);
 }
 
 .mb-6 {
-	margin-bottom: var(--sp-600);
+	margin-bottom: var(--sp-6);
 }
 
 .mb-8 {
-	margin-bottom: var(--sp-800);
+	margin-bottom: var(--sp-8);
 }
 
 .mx-auto {

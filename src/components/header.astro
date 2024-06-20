@@ -28,19 +28,24 @@ const navList = [
 	.main-header {
 		display: flex;
 		justify-content: space-between;
+		padding-block: var(--sp-6);
 	}
 
 	.header-nav {
 		font-size: var(--fs-300);
-
-		@media (min-width: 48em) {
-			& {
-				font-size: var(--fs-500);
-			}
-		}
 	}
 
 	.logo {
-		height: 1.25rem;
+		height: var(--sp-5);
+	}
+
+	@media (min-width: 48em) {
+		.main-header {
+			padding-block: var(--sp-950);
+		}
+
+		.header-nav {
+			font-size: var(--fs-500);
+		}
 	}
 </style>

@@ -17,25 +17,25 @@ import CtaForm from "../components/cta-form.astro"
 
 <style>
 	.cta-section {
-		padding-block: 7rem 4rem 5rem;
+		padding-block: var(--sp-28) var(--sp-16) var(--sp-20);
 		background: linear-gradient(0deg, rgba(255, 212, 255, 0) 50%, rgba(255, 212, 255, 1) 50%);
 	}
 
 	.cta-card {
 		background-color: violet;
-		padding: 2rem 1.5rem;
+		padding: var(--sp-8) var(--sp-6);
 		display: grid;
-		gap: 1rem;
+		gap: var(--sp-4);
 	}
 
 	@media (min-width: 48em) {
 		.cta-section {
-			padding-block: 10rem 7rem;
+			padding-block: var(--sp-40) var(--sp-28);
 		}
 
 		.cta-card {
-			border-radius: 0.25rem;
-			padding: 4rem 5rem;
+			border-radius: var(--br-xs);
+			padding: var(--sp-16) var(--sp-20);
 		}
 
 		h2 {

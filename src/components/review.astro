@@ -27,20 +27,20 @@ const { name, position, avatarUrl } = author
 <style>
 	.review {
 		background-color: red;
-		padding: 1.5rem 1rem;
-		border-radius: 0.25rem;
+		border-radius: var(--br-xs);
+		padding: var(--sp-6) var(--sp-4);
 	}
 
 	.review__author {
 		display: flex;
-		gap: 0.5rem;
+		gap: var(--sp-2);
 		align-items: center;
 	}
 
 	.review__avatar {
-		width: 1.5rem;
+		width: var(--sp-6);
 		aspect-ratio: 1;
-		border-radius: 9999rem;
+		border-radius: var(--br-full);
 	}
 
 	.review__name {

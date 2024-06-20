@@ -17,15 +17,24 @@
 	--fw-regular: 400;
 	--fw-bold: 700;
 
-	--sp-100: 0.25rem;
-	--sp-200: 0.5rem;
-	--sp-400: 1rem;
-	--sp-500: 1.25rem;
-	--sp-600: 1.5rem;
-	--sp-800: 2rem;
-	--sp-900: 2.5rem;
+	--br-xs: 0.25rem;
+	--br-full: 9999rem;
+
+	--sp-1: 0.25rem;
+	--sp-2: 0.5rem;
+	--sp-4: 1rem;
+	--sp-5: 1.25rem;
+	--sp-6: 1.5rem;
+	--sp-8: 2rem;
+	--sp-10: 2.5rem;
+	--sp-12: 3rem;
+	--sp-16: 4rem;
+	--sp-20: 5rem;
+	--sp-28: 7rem;
+	--sp-40: 10rem;
 
 	--sz-200: 14rem;
+	--sz-400: 27rem;
 	--sz-500: 50rem;
 	--sz-700: 70rem;
 	--sz-prose: 65ch;
