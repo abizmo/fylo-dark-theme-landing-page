@@ -2,12 +2,13 @@
 interface Props {
 	href: string
 	type: "location" | "phone" | "email"
+	class?: string
 }
 
-const { href, type } = Astro.props
+const { href, type, class: className } = Astro.props
 ---
 
-<a href={href} class:list={["contact-link", `contact-${type}`]}><slot /></a>
+<a href={href} class:list={["contact-link", `contact-${type}`, className]}><slot /></a>
 
 <style>
 	.contact-link {

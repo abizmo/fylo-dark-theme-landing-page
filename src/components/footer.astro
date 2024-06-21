@@ -38,53 +38,73 @@ const navList2 = [
 ]
 ---
 
-<footer class="container">
-	<header class="footer-header">
-		<img src="/images/logo.svg" alt="Fylo" />
-	</header>
-	<main class="footer-content">
-		<div class="contact">
-			<ContactLink href="#" type="location">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum facere consequuntur numquam,
-				fuga unde quas illum, saepe tempore voluptas.
-			</ContactLink>
-			<div>
-				<ContactLink href="tel:#" type="phone">+1-543-123-4567</ContactLink>
-				<ContactLink href="mailto:#" type="email">example@fylo.com</ContactLink>
+<footer class="bg-900">
+	<div class="container">
+		<header class="footer-header">
+			<img src="/images/logo.svg" alt="Fylo" />
+		</header>
+		<main class="footer-content">
+			<div class="contact">
+				<ContactLink href="#" type="location">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum facere consequuntur
+					numquam, fuga unde quas illum, saepe tempore voluptas.
+				</ContactLink>
+				<div>
+					<ContactLink href="tel:#" type="phone">+1-543-123-4567</ContactLink>
+					<ContactLink href="mailto:#" type="email">example@fylo.com</ContactLink>
+				</div>
 			</div>
-		</div>
-		<div class="navs">
-			<NavList items={navList1} />
-			<NavList items={navList2} />
-		</div>
-		<div class="socials">
-			<SocialsList />
-		</div>
-	</main>
+			<div class="navs">
+				<NavList items={navList1} />
+				<NavList items={navList2} />
+			</div>
+			<div class="socials">
+				<SocialsList />
+			</div>
+		</main>
+	</div>
 </footer>
 
 <style>
+	footer {
+		margin-bottom: var(--sp-16);
+	}
+
+	.footer-header {
+		margin-bottom: var(--sp-8);
+	}
+
 	.contact {
 		display: grid;
 		gap: var(--sp-4);
+		margin-bottom: var(--sp-20);
 	}
 
 	.navs {
 		display: grid;
-		gap: var(--sp-4);
+		gap: var(--sp-10);
+		margin-bottom: var(--sp-16);
 	}
 
 	@media (min-width: 48em) {
+		.footer-header {
+			margin-bottom: var(--sp-20);
+		}
+
 		.footer-content {
-			display: flex;
+			display: grid;
+			grid-template-columns: 1fr repeat(2, max-content);
 			gap: var(--sp-20);
 		}
 
 		.contact {
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr max-content;
+			gap: var(--sp-20);
 		}
+
 		.navs {
 			display: flex;
+			gap: var(--sp-20);
 		}
 	}
 </style>

@@ -26,8 +26,10 @@ const { items, flex = false, class: className, ...rest } = Astro.props
 </ul>
 
 <style>
-	.nav-list.flex {
-		--gap: var(--sp-4);
+	.nav-list {
+		display: grid;
+		grid-template-rows: repeat(4, max-content);
+		gap: var(--gap, var(--sp-4));
 	}
 
 	@media (min-width: 48em) {

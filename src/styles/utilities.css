@@ -8,11 +8,15 @@
 }
 
 .bg-700 {
-	background-color: silver;
+	background-color: hsl(var(--clr-neutral-700));
+}
+
+.bg-900 {
+	background-color: hsl(var(--clr-neutral-900));
 }
 
 .flex {
-	display: flex;
+	display: flex !important;
 	gap: var(--gap, var(--sp-2));
 }
 
