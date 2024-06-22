@@ -32,6 +32,10 @@ const { items, flex = false, class: className, ...rest } = Astro.props
 		gap: var(--gap, var(--sp-4));
 	}
 
+	.nav-link:hover {
+		font-weight: var(--fw-bold);
+	}
+
 	@media (min-width: 48em) {
 		.nav-list.flex {
 			--gap: var(--sp-14);

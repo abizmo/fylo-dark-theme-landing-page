@@ -93,7 +93,7 @@ const navList2 = [
 
 		.footer-content {
 			display: grid;
-			grid-template-columns: 1fr repeat(2, max-content);
+			grid-template-columns: 1fr 260px max-content;
 			gap: var(--sp-20);
 		}
 
@@ -103,7 +103,8 @@ const navList2 = [
 		}
 
 		.navs {
-			display: flex;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
 			gap: var(--sp-20);
 		}
 	}
