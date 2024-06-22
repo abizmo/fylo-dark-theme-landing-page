@@ -1,11 +1,19 @@
 ---
-
+import Facebook from "./facebook.astro"
+import Instagram from "./instagram.astro"
+import Twitter from "./twitter.astro"
 ---
 
 <ul class="socials-list">
-	<li class="socials-item"><a class="socials-link" href="#">F</a></li>
-	<li class="socials-item"><a class="socials-link" href="#">T</a></li>
-	<li class="socials-item"><a class="socials-link" href="#">I</a></li>
+	<li class="socials-item">
+		<a class="socials-link" href="#"><Facebook class="socials-icons" /></a>
+		<li class="socials-item">
+			<a class="socials-link" href="#"><Twitter class="socials-icons" /></a>
+		</li>
+	</li>
+	<li class="socials-item">
+		<a class="socials-link" href="#"><Instagram class="socials-icons" /></a>
+	</li>
 </ul>
 
 <style>
@@ -18,9 +26,32 @@
 	.socials-link {
 		display: inline-grid;
 		place-content: center;
-		width: var(--sp-5);
+		width: var(--sp-6);
 		aspect-ratio: 1;
 		border: 1px solid currentColor;
 		border-radius: var(--br-full);
+	}
+
+	.socials-link:hover {
+		border-color: red;
+	}
+
+	.socials-icons {
+		width: 12px;
+		color: currentColor;
+	}
+
+	.socials-link:hover .socials-icons {
+		color: red;
+	}
+
+	@media (min-width: 48em) {
+		.socials-link {
+			width: var(--sp-8);
+		}
+
+		.socials-icons {
+			width: 16px;
+		}
 	}
 </style>
