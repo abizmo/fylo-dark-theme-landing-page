@@ -8,11 +8,11 @@
 }
 
 .bg-700 {
-	background-color: hsl(var(--clr-neutral-700));
+	background-color: hsl(var(--clr-primary-700));
 }
 
 .bg-900 {
-	background-color: hsl(var(--clr-neutral-900));
+	background-color: hsl(var(--clr-primary-900));
 }
 
 .flex {

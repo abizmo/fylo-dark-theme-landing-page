@@ -1,5 +1,5 @@
 ---
-
+import IconArrow from "../components/icon-arrow.astro"
 ---
 
 <section class="how-works">
@@ -17,9 +17,7 @@
 			No email attachments required.
 		</p>
 
-		<a class="fs-300 | how-works--link" href="#"
-			>See how Fylo works <img src="/images/icon-arrow.svg" alt="arrow" /></a
-		>
+		<a class="fs-300 | how-works--link" href="#">See how Fylo works <IconArrow /></a>
 	</div>
 </section>
 
@@ -35,13 +33,19 @@
 	}
 
 	.how-works--link {
+		--color: hsl(var(--clr-accent-1));
 		display: flex;
 		align-items: center;
 		gap: var(--sp-2);
-		color: red;
-		border-bottom: 1px solid red;
+		color: var(--color);
+		border-bottom: 1px solid var(--color);
 		padding-bottom: var(--sp-1);
 		max-width: fit-content;
+	}
+
+	.how-works--link:hover,
+	.how-works--link:focus-within {
+		--color: currentColor;
 	}
 
 	@media (min-width: 48em) {
