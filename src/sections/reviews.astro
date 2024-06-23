@@ -40,9 +40,31 @@ const reviews = [
 
 <style>
 	.reviews {
+		position: relative;
 		display: grid;
 		gap: var(--sp-6);
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
 		justify-content: center;
+		margin-bottom: var(--sp-28);
+	}
+
+	.reviews::before {
+		--width: var(--sp-5);
+		position: absolute;
+		top: calc((var(--width) * 0.3) - var(--width));
+		content: " ";
+		width: var(--width);
+		aspect-ratio: 1;
+		background-image: url(/images/bg-quotes.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		z-index: -1;
+	}
+
+	@media (width >= 48em) {
+		.reviews:before {
+			--width: var(--sp-12);
+			left: calc((var(--width) * 0.8) - var(--width));
+		}
 	}
 </style>
