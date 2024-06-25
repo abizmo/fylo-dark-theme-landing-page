@@ -29,6 +29,10 @@ import Button from "../components/button.astro"
 		border: 0;
 	}
 
+	.error {
+		color: hsl(var(--clr-error));
+	}
+
 	@media (min-width: 48em) {
 		.cta-form {
 			grid-template-columns: 1fr max-content;
@@ -54,7 +58,6 @@ import Button from "../components/button.astro"
 	email?.addEventListener("input", () => {
 		if (email.validity.valid) {
 			emailError.textContent = ""
-			emailError.classList.remove("active")
 		} else {
 			showError()
 		}
@@ -71,6 +74,5 @@ import Button from "../components/button.astro"
 
 	function showError() {
 		emailError.textContent = "Please enter a valid email address"
-		emailError.classList.add("active")
 	}
 </script>

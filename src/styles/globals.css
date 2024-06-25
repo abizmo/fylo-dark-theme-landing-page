@@ -1,11 +1,18 @@
 :root {
 	--clr-accent-1: 176 68% 64%;
 	--clr-accent-2: 198 60% 50%;
+	--clr-error: 0 100% 63%;
 	--clr-neutral-100: 0 0% 100%;
 	--clr-primary-600: 219 30% 18%;
 	--clr-primary-700: 217 28% 15%;
 	--clr-primary-800: 218 28% 13%;
 	--clr-primary-900: 216 53% 9%;
+
+	--clr-gradient: linear-gradient(
+		90deg,
+		hsl(var(--clr-accent-1)) 0%,
+		hsl(var(--clr-accent-2)) 100%
+	);
 
 	--ff-body: "Open Sans", sans-serif;
 	--ff-accent: "Raleway", sans-serif;
@@ -40,6 +47,7 @@
 	--sp-16: 4rem;
 	--sp-20: 5rem;
 	--sp-28: 7rem;
+	--sp-32: 8rem;
 	--sp-40: 10rem;
 
 	--sz-200: 14rem;
@@ -56,8 +64,8 @@
 }
 
 body {
-	background-color: black;
-	color: white;
+	background-color: hsl(var(--clr-primary-800));
+	color: hsl(var(--clr-neutral-100));
 	font-family: var(--ff-body);
 	font-size: var(--fs-body);
 	line-height: 1.55;

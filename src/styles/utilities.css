@@ -11,6 +11,10 @@
 	background-color: hsl(var(--clr-primary-700));
 }
 
+.bg-800 {
+	background-color: hsl(var(--clr-primary-800));
+}
+
 .bg-900 {
 	background-color: hsl(var(--clr-primary-900));
 }
@@ -70,6 +74,10 @@
 
 .mb-8 {
 	margin-bottom: var(--sp-8);
+}
+
+.mb-32 {
+	margin-bottom: var(--sp-32);
 }
 
 .mx-auto {

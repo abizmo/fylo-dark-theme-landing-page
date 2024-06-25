@@ -21,7 +21,7 @@ const navList = [
 	<div class="container main-header">
 		<a href="/"><img class="logo" src="/images/logo.svg" alt="Fylo" /></a>
 		<nav>
-			<NavList class="ff-accent header-nav opacity-80" items={navList} flex />
+			<NavList class="ff-accent header-nav" items={navList} flex />
 		</nav>
 	</div>
 </header>
@@ -36,6 +36,16 @@ const navList = [
 
 	.header-nav {
 		font-size: var(--fs-300);
+		justify-content: space-evenly;
+	}
+
+	.header-nav :global(a) {
+		opacity: 0.8;
+	}
+
+	.header-nav :global(a:hover) {
+		text-decoration: underline;
+		opacity: 1;
 	}
 
 	@media (max-width: 48em) {

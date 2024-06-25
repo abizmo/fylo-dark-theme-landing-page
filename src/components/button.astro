@@ -15,9 +15,15 @@ const { class: className, ...rest } = Astro.props
 		padding-inline: var(--sp-6);
 		border-radius: var(--br-full);
 		border: 0;
-		background-color: red;
-		color: silver;
+		background-color: hsl(var(--clr-accent-1));
+		background-image: var(--clr-gradient);
+		color: currentColor;
 		text-transform: capitalize;
+		cursor: pointer;
+	}
+
+	.btn:hover {
+		background-image: none;
 	}
 
 	@media (min-width: 48em) {
